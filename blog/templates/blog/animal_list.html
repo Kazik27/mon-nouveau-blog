@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<html>
+	<head>
+		<title>L'animalerie</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<meta charset="UTF-8">
+    		<link href="//fonts.googleapis.com/css?family=Times&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+    			<div class="page-header">
+<h1><a href="/">Bienvenue à l'animalerie !</a></h1<
+        	</div>
+	</div>
+
+<p>Mise à jour le 5.12.2020 à 21h</p>
+
+<corps>
+<h2><a href="/">Voici le tableau des animaux présents dans l'animalerie :</a></h2<
+</div>
+<br>
+<br>
+
+<table border="1" width="100%">
+<th><a href="#">{{ "Nom" }}</a></th>
+    <th><a href="#">{{ "Etat" }}</a></th>
+    <th><a href="#">{{ "Lieu" }}</a></th>
+    <th><a href="#">{{ "Race" }}</a></th>
+    <th><a href="#">{{ "Espèce"|linebreaksbr }}</a></th>
+    {% for animal in animals %}
+  <tr>
+      <th><href="#">{{ animal.id_animal }}</a></th>
+    <td>{{ animal.etat }}</td>
+    <td>{{ animal.lieu }}</td>
+    <td>{{ animal.race }}</td>
+    <td>{{ animal.type|linebreaksbr }}</td>
+  </tr>
+    {% endfor %}
+
+</table>
+
+
+</corps>
+</body>
+</html>
